@@ -56,6 +56,8 @@ public class FXMLDocumentController implements Initializable {
     private TableColumn<Parque, Integer> TableColumnExtension;
     @FXML
     private TableColumn<Parque, Integer> TableColumnIDCiudad;
+    @FXML
+    private Label LabelTotalParques;
     
     private void handleButtonAction(ActionEvent event) {
     }
@@ -80,6 +82,7 @@ public class FXMLDocumentController implements Initializable {
         TableColumnNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         TableColumnExtension.setCellValueFactory(new PropertyValueFactory<>("extension"));
         TableColumnIDCiudad.setCellValueFactory(new PropertyValueFactory<>("idComunidad"));
+        LabelTotalParques.setText(""+listaParques.size());
     }
     
 }

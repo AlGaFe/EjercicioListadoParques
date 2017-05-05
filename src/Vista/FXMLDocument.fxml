@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="312.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.FXMLDocumentController">
-    <children>
-      <Pane layoutX="98.0" layoutY="265.0" prefHeight="40.0" prefWidth="275.0">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Vista.FXMLDocumentController">
+     <children>
+      <Pane layoutX="180.0" layoutY="346.0" prefHeight="40.0" prefWidth="275.0">
          <children>
               <Label fx:id="LableConectado" layoutX="103.0" layoutY="12.0" minHeight="16" minWidth="69" text="Conectado" textFill="#0006ff">
                <font>
@@ -23,16 +23,16 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutY="-2.0" prefHeight="54.0" prefWidth="445.0">
+      <Pane layoutX="95.0" layoutY="20.0" prefHeight="54.0" prefWidth="445.0">
          <children>
             <Label fx:id="LabelCodCom" layoutX="14.0" layoutY="24.0" prefHeight="14.0" prefWidth="122.0" text="Código de la comunidad" />
             <TextField fx:id="TextFieldCodCom" layoutX="136.0" layoutY="20.0" prefHeight="16.0" prefWidth="199.0" promptText="Introduce el código de la comunidad" />
             <Button fx:id="ButtonVerParuqes" layoutX="362.0" layoutY="20.0" mnemonicParsing="false" onAction="#ActionButtonVerParques" text="Ver Parques" textFill="#e10c0c" />
          </children>
       </Pane>
-      <Pane layoutX="4.0" layoutY="52.0" prefHeight="204.0" prefWidth="438.0">
+      <Pane layoutX="99.0" layoutY="98.0" prefHeight="204.0" prefWidth="438.0">
          <children>
-            <Label fx:id="LabelParque" layoutX="14.0" layoutY="14.0" text="Datos del Parque:" />
+            <Label fx:id="LabelParque" layoutX="14.0" layoutY="14.0" text="Total parques:" />
             <TableView fx:id="TableViewParques" layoutX="19.0" layoutY="28.0" prefHeight="160.0" prefWidth="400.0">
               <columns>
                 <TableColumn fx:id="TableColumID" prefWidth="114.0" text="ID" />
@@ -41,6 +41,7 @@
                   <TableColumn fx:id="TableColumnIDCiudad" minWidth="0.0" prefWidth="105.0" text="ID Ciudad" />
               </columns>
             </TableView>
+            <Label fx:id="LabelTotalParques" layoutX="92.0" layoutY="14.0" prefHeight="14.0" prefWidth="22.0" textFill="#da0e0e" />
          </children>
       </Pane>
     </children>

@@ -11,13 +11,13 @@ public class Parque {
     private final IntegerProperty id;
     private final StringProperty nombre;
     private final IntegerProperty extension;
-    private final IntegerProperty idParque;
+    private final IntegerProperty idComunidad;
 
     public Parque(int nId,String nombrePar,int extensionPar,int nidParque) {
         this.id=new SimpleIntegerProperty(nId);
         this.nombre=new SimpleStringProperty(nombrePar);
         this.extension = new SimpleIntegerProperty(extensionPar);
-        this.idParque = new SimpleIntegerProperty(nidParque);   
+        this.idComunidad = new SimpleIntegerProperty(nidParque);   
     }
 
     public int getId() {
@@ -56,16 +56,16 @@ public class Parque {
         return extension;
     }
 
-    public int getIdParque() {
-        return idParque.get();
+    public int getIdComunidad() {
+        return idComunidad.get();
     }
 
-    public void setIdParque(int value) {
-        idParque.set(value);
+    public void setIdComunidad(int value) {
+        idComunidad.set(value);
     }
 
-    public IntegerProperty idParqueProperty() {
-        return idParque;
+    public IntegerProperty IdParqueProperty() {
+        return idComunidad;
     }
 
 }
