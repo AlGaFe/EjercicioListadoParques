@@ -1,55 +1,71 @@
-
 package Modelo;
+
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 /* @author Álvaro García Fernández */
 public class Parque {
-    private int id;
-    private String nombre;
-    private int extension;
-    private int idParque;
 
-    public Parque(int id, String nombre, int extension, int idParque) {
-        this.id = id;
-        this.nombre = nombre;
-        this.extension = extension;
-        this.idParque = idParque;
-    }
+    private final IntegerProperty id;
+    private final StringProperty nombre;
+    private final IntegerProperty extension;
+    private final IntegerProperty idParque;
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setExtension(int extension) {
-        this.extension = extension;
-    }
-
-    public void setIdParque(int idParque) {
-        this.idParque = idParque;
+    public Parque(int nId,String nombrePar,int extensionPar,int nidParque) {
+        this.id=new SimpleIntegerProperty(nId);
+        this.nombre=new SimpleStringProperty(nombrePar);
+        this.extension = new SimpleIntegerProperty(extensionPar);
+        this.idParque = new SimpleIntegerProperty(nidParque);   
     }
 
     public int getId() {
+        return id.get();
+    }
+
+    public void setId(int value) {
+        id.set(value);
+    }
+
+    public IntegerProperty idProperty() {
         return id;
     }
 
     public String getNombre() {
+        return nombre.get();
+    }
+
+    public void setNombre(String value) {
+        nombre.set(value);
+    }
+
+    private StringProperty nombreProperty() {
         return nombre;
     }
 
     public int getExtension() {
+        return extension.get();
+    }
+
+    public void setExtension(int value) {
+        extension.set(value);
+    }
+
+    public IntegerProperty extensionProperty() {
         return extension;
     }
 
     public int getIdParque() {
+        return idParque.get();
+    }
+
+    public void setIdParque(int value) {
+        idParque.set(value);
+    }
+
+    public IntegerProperty idParqueProperty() {
         return idParque;
     }
 
-    @Override
-    public String toString() {
-        return nombre.toUpperCase();
-    }
-    
 }
-
